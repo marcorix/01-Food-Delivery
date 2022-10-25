@@ -37,6 +37,8 @@ class CustomerRepository
 
   def load_csv
     CSV.foreach(@csv_file, headers: :first_row, header_converters: :symbol) do |row|
+      puts "helluuu"
+      p row
       row[:id] = row[:id].to_i
       @customers << Customer.new(row)
     end
