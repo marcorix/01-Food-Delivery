@@ -44,6 +44,3 @@ class MealRepository
     end
   end
 end
-
-csv_file   = File.join(__dir__, '../../data/meals.csv')
-repo = MealRepository.new(csv_file)
